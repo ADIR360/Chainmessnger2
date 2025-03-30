@@ -1,0 +1,226 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f7f7f7;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+main {
+  width: 100%;
+}
+
+footer {
+  position: relative;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  color: rgb(218, 218, 218);
+  background-color: rgb(0, 0, 0);
+  backdrop-filter: saturate(180%) blur(20px);
+  box-shadow: 0 16px 70px -8px rgba(0, 0, 0, 0.25);
+  transition: background 0.3s linear;
+}
+
+footer .containerx {
+  width: 100%;
+  padding: 30px 10vh;
+  flex-direction: column;
+}
+
+.content_footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.profil .logo_area {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.profil .logo_area img {
+  background-color: transparent;
+  /* filter: invert(1); */
+  width: 60%;
+}
+
+.logo_area .logo_name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 1rem;
+}
+.profil {
+  width: 50vh;
+}
+.desc_area {
+  width: 70vh;
+  margin-bottom: 1.25rem;
+  overflow: hidden;
+}
+
+.desc_area p {
+  color: #828282;
+  font-weight: 400;
+  line-height: 25px;
+  font-family: "Rubik", sans-serif;
+}
+
+.social_media box-icon {
+  fill: #828282;
+  margin-right: 18px;
+  font-size: 24px;
+  transition: all 0.3s ease;
+}
+
+.social_media box-icon:hover {
+  fill: #ffffff;
+}
+
+.service_area {
+  display: flex;
+}
+
+.service_header {
+  margin-right: 40px;
+}
+
+li.service_name {
+  font-family: "Rubik", sans-serif;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.service_header li a {
+  font-family: "Rubik", sans-serif;
+  color: #828282;
+  font-weight: 400;
+  padding-bottom: 1px;
+  transition: all 0.3s ease;
+}
+.service_header li a:hover {
+  color: #ffffff;
+  text-decoration: line-through;
+}
+
+.service_header li {
+  margin-bottom: 10px;
+}
+
+hr {
+  height: 1px;
+  border: none;
+  background-color: #828282;
+  margin-bottom: 1rem;
+}
+
+.footer_bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.copy_right {
+  color: #828282;
+  display: flex;
+  font-size: smaller;
+  align-items: center;
+}
+
+.copy_right span {
+  margin-left: 8px;
+  font-weight: 400;
+  letter-spacing: 0.135rem;
+  color: #828282;
+  font-family: "Rubik", sans-serif;
+}
+
+.tou a {
+  color: #828282;
+  margin-left: 1.5rem;
+  font-family: "Rubik", sans-serif;
+}
+
+.tou a:hover {
+  color: #ffffff;
+}
+
+@media only screen and (max-width: 880px) {
+  footer {
+    width: 180vw;
+  }
+  .containerx {
+    padding: 5vh 5vh 2vh 5vh;
+  }
+  .content_footer {
+    flex-direction: column;
+    margin-bottom: 0;
+    align-items: flex-start;
+  }
+
+  .social_media {
+    display: flex;
+    width: 38vh;
+    padding-bottom: 2vh;
+    border-bottom: 1px solid rgb(255, 255, 255);
+  }
+
+  .profil .logo_area {
+    margin-bottom: 1.2vh;
+    img {
+      width: 6vh;
+    }
+  }
+
+  .profil {
+    width: 65vh;
+    margin-bottom: 2vh;
+    margin-right: 2vh;
+  }
+
+  .desc_area {
+    width: 65vh;
+    padding-bottom: 2vh;
+    margin-bottom: 2vh;
+    border-bottom: 1px solid rgb(255, 255, 255);
+  }
+
+  .service_area {
+    flex-direction: row;
+    max-width: 220vw;
+    gap: 4vw;
+    padding-bottom: 1vh;
+  }
+
+  .service_header {
+    margin-right: 2vh;
+  }
+
+  .service_header li {
+    margin-bottom: 15px;
+  }
+
+  .footer_bottom {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tou {
+    margin-top: 1.5vh;
+  }
+}

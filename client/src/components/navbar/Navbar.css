@@ -1,0 +1,110 @@
+@import "../fonts/fonts.css";
+.navbar {
+  font-family: DM-sans2;
+  position: fixed; /* Changed from sticky to fixed */
+  top: 0; /* Adjusted top to 0 */
+  width: 100%; /* Ensure the navbar spans the full width */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(13, 18, 33, 0.6); /* Semi-transparent background */
+  backdrop-filter: blur(
+    10px
+  ); /* Adds a blur effect to what's behind the navbar */
+  padding: 12px 24px;
+  border-radius: 0 0 50px 50px; /* Rounded corners at the bottom */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2); /* Subtle shadow for floating effect */
+  z-index: 1000; /* Ensure the navbar is above other content */
+}
+
+.logo-container {
+  display: flex;
+  justify-content: flex-start;
+  /* margin-bottom: 4rem; */
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  animation: fadeIn 1s ease-in-out;
+  img {
+    width: 80%;
+    height: 50px;
+    margin-right: 50px;
+    /* background-color: red; */
+  }
+}
+
+.logo-icon {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(45deg, #3b82f6, #60a5fa);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo-text {
+  margin-left: 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand img {
+  height: 32px;
+  margin-right: 10px;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 24px;
+}
+
+.navbar-links a {
+  color: #8b93a7; /* Light gray for non-active links */
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.navbar-links a.active,
+.navbar-links a:hover {
+  color: #ffffff; /* White for active/hovered links */
+}
+
+.navbar-actions {
+  display: flex;
+  gap: 16px;
+}
+
+.btn-login {
+  color: #ffffff;
+  background: transparent;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.btn-download {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 50px;
+  padding: 8px 24px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-download:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
