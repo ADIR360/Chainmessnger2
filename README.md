@@ -2,7 +2,7 @@
 
 ChainMessenger is a secure, blockchain-powered messaging app built with [XMTP](https://xmtp.org/), enabling wallet-to-wallet communication without centralized servers. Think of it as the WhatsApp of Web3 — where your Ethereum wallet is your chat identity.
 
-![ChainMessenger](https://miro.medium.com/v2/resize:fit:1200/1*GGhLSOXBzyCAAcxfs2c02w.png)
+![ChainMessenger]([https://drive.google.com/file/d/1fwIjAt7cTiV4X7yDpSMNokHmACWIAzgX/view?usp=sharing])
 
 ---
 
