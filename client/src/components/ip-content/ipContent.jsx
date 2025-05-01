@@ -21,6 +21,7 @@ function ChattingContent() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [connectionStatus, setConnectionStatus] = useState("Disconnected");
   const [isLoading, setIsLoading] = useState(false);
+  const [isNewConversationMode, setIsNewConversationMode] = useState(false); // New state to track new conversation mode
 
   // Initialize provider and connect to MetaMask
   useEffect(() => {
@@ -245,7 +246,8 @@ function ChattingContent() {
         const unsubscribe = await setupConversationStream();
         
         // Set first conversation as active if no active conversation and there are conversations
-        if (!activeConversation && formattedConversations.length > 0) {
+        // BUT only if we're not in new conversation mode
+        if (!activeConversation && formattedConversations.length > 0 && !isNewConversationMode) {
           setActiveConversation(formattedConversations[0].conversation);
           setRecipientAddress(formattedConversations[0].peerAddress);
         }
@@ -262,7 +264,7 @@ function ChattingContent() {
     if (isInitialized && client) {
       loadConversations();
     }
-  }, [client, isInitialized, activeConversation]);
+  }, [client, isInitialized, activeConversation, isNewConversationMode]); // Added isNewConversationMode to dependencies
 
   // Load messages when active conversation changes
   useEffect(() => {
@@ -521,6 +523,8 @@ function ChattingContent() {
           
           setConversations(prev => [newConvo, ...prev]);
           setActiveConversation(conversation);
+          // Once we've created a new conversation, we're no longer in new conversation mode
+          setIsNewConversationMode(false);
         } catch (convoError) {
           console.error("Error creating conversation:", convoError);
           alert("Error creating conversation: " + convoError.message);
@@ -585,6 +589,7 @@ function ChattingContent() {
     console.log("Selecting conversation with:", conversation.peerAddress);
     setActiveConversation(conversation.conversation);
     setRecipientAddress(conversation.peerAddress);
+    setIsNewConversationMode(false); // Exit new conversation mode when selecting an existing conversation
     
     // Reset unread count
     setUnreadCounts(prev => ({
@@ -602,11 +607,12 @@ function ChattingContent() {
     setMenuOpen(false);
   }, []);
 
-  // For new conversation
+  // For new conversation - updated to set the new conversation mode
   const startNewConversation = useCallback(() => {
     setActiveConversation(null);
     setRecipientAddress("");
     setMessages([]);
+    setIsNewConversationMode(true); // Set new conversation mode to true
     // Close menu after clicking new conversation
     setMenuOpen(false);
   }, []);
@@ -688,12 +694,15 @@ function ChattingContent() {
                   </span>
                 </>
               ) : (
-                <span className="no-recipient">No active conversation</span>
+                <span className="no-recipient">
+                  {isNewConversationMode ? "New conversation" : "No active conversation"}
+                </span>
               )}
             </div>
           </div>
           
-          {!activeConversation && (
+          {/* Show input field if we're in new conversation mode or there's no active conversation */}
+          {(isNewConversationMode || !activeConversation) && (
             <div className="new-recipient-input">
               <input 
                 type="text" 
@@ -783,8 +792,8 @@ function ChattingContent() {
             ))
           ) : (
             <div className="empty-conversation">
-              {recipientAddress ? 
-                "No messages yet. Start the conversation!" : 
+              {isNewConversationMode ? "Enter a recipient address and start a new conversation!" : 
+                recipientAddress ? "No messages yet. Start the conversation!" : 
                 "Select a conversation or start a new one"}
             </div>
           )}
