@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "downlevelIteration": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "lib": ["dom"],
+    "moduleResolution": "bundler",
+    "noEmit": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "strict": true,
+    "target": "es2021",
+    "types": ["vitest/globals"]
+  },
+  "include": ["src/**/*", "bench/**/*", "build/**/*", "test/**/*"]
+}
