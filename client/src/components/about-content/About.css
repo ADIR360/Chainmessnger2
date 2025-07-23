@@ -298,6 +298,27 @@ h1.top-heading {
   }
 }
 
+.about-working-section {
+  color: #fff;
+  text-align: center;
+  margin: 40px auto 0 auto;
+  max-width: 700px;
+  font-size: 1.1rem;
+  font-family: 'manrope', Arial, sans-serif;
+  background: rgba(20, 20, 30, 0.7);
+  border-radius: 10px;
+  padding: 18px 24px;
+  box-shadow: 0 2px 16px 0 rgba(0,0,0,0.10);
+}
+
+@media (max-width: 650px) {
+  .about-working-section {
+    font-size: 1rem;
+    padding: 12px 8px;
+    max-width: 95vw;
+  }
+}
+
 /* Responsive styles for mobile */
 @media screen and (max-width: 650px) {
   .about-column {
