@@ -14,13 +14,13 @@ function Content() {
   const profiles = [
     // { name: 'Akshat Negi', role: 'FrontEndDeveloper', img: aky, email: 'akshatnegiarchit272003@gmail.com', linkedin: 'https://www.linkedin.com/in/me-akshat-negi/', projects: 'https://github.com/Akshat-NegI27', data: 'My role is to bring designs to life and ensure a seamless, user-friendly interface for our IP vulnerability tracker. By leveraging modern web technologies, I aim to create an intuitive experience that empowers users to navigate and utilize our platform effectively. I focus on responsive design, accessibility, and performance to ensure the application works flawlessly.' },
     // { name: 'Ameya Taneja', role: 'Developer & Co-Lead', img: ame, email: 'ameyataneja1302@gmail.com', linkedin: 'https://www.linkedin.com/in/ameyataneja/', projects: 'https://github.com/realTNEU', data: 'I am a Full-Stack Developer with a passion for building robust, scalable applications. My role is to design and implement the backend architecture, APIs, and data models that power our IP vulnerability tracker. I focus on performance, security, and maintainability to ensure our platform meets the needs of our users.' },
-    { name: 'Arush Dubey', role: 'Developer', img: aru, email: 'arushdubey360@gmail.com', linkedin: 'https://www.linkedin.com/in/arush-dubey-358840244/', projects: 'http://github.com/ADIR360?tab=repositories', data: `As the principal architect and driving force behind this program, I meticulously oversaw every stage of its development—from initial ideation to deployment. My vision was to create a robust, scalable, and user-centric IP vulnerability tracker that not only meets but exceeds industry standards. I established the foundational architecture, set the technical direction, and ensured that every component aligned with our core objectives of security, efficiency, and usability.
+    { name: 'Arush Dubey', role: 'Developer', img: aru, email: 'arushdubey360@gmail.com', linkedin: 'https://www.linkedin.com/in/arush-dubey-358840244/', projects: 'http://github.com/ADIR360?tab=repositories', data: `As the sole architect and developer of ChainMessenger, a cutting-edge blockchain-based decentralized messaging platform, I was responsible for every aspect of its creation. My vision was to empower users with secure, private, and censorship-resistant communication by leveraging the XMTP protocol and Ethereum wallet authentication.
 
-I single-handedly developed both the entire frontend and the core logic for integrating XMTP messaging into this project, writing all of the code myself over the course of just two nights. This intense, focused effort ensured a unified vision and seamless integration across the stack, from user interface to secure communication protocols.
+Over the course of just two nights, I single-handedly designed and implemented both the entire frontend in React and the complete messaging logic using XMTP. This included wallet-based authentication, end-to-end encrypted message flow, and seamless integration with decentralized storage nodes—ensuring that user privacy and security are at the core of the application.
 
-Throughout the development timeline, I led the team through critical milestones: conceptual design, technology selection, iterative prototyping, rigorous testing, and final launch. My strategic thinking shaped the program’s modular structure, enabling rapid adaptation to evolving requirements and seamless integration of advanced features. I championed best practices in code quality, performance optimization, and accessibility, ensuring the platform delivers a flawless experience to all users.
+My technical leadership shaped the project’s architecture, from the user interface to the cryptographic protocols underpinning message delivery. Every line of code reflects my commitment to reliability, performance, and a frictionless user experience. By personally overseeing the rapid development and launch, I ensured that ChainMessenger stands out as a robust, production-ready solution in the Web3 ecosystem.
 
-My commitment to excellence and relentless pursuit of innovation have been instrumental in transforming this project from a concept into a powerful, production-ready solution. Every decision, from high-level architecture to nuanced user interactions, reflects my dedication to building a product that stands out for its reliability, sophistication, and impact.` },
+This project is a testament to my ability to turn ambitious ideas into reality through focused execution, deep technical expertise, and an unwavering dedication to building tools that advance the future of decentralized communication.` },
     // { name: 'Krishna Gaur', role: 'Content Writer', img: kri, email: 'Krishna.105709@stu.upes.ac.in', linkedin: 'hwww.linkedin.com/in/krishna-gaur-0ab398293', projects: 'https://github.com/KRISHNAGAUR2005', data: 'As the Database Manager, I oversee the design, implementation, and maintenance of our database systems. My role is to ensure data integrity, optimize performance, and enable seamless access to critical information. By managing secure storage and efficient retrieval of vulnerability data, I support our mission to help users identify and address risks effectively.' }
 
   ];
@@ -84,6 +84,14 @@ My commitment to excellence and relentless pursuit of innovation have been instr
             </figure>
           </div>
         ))}
+      </div>
+
+      {/* Working of ChainMessenger Section */}
+      <div className="about-working-section">
+        <h2>Working of ChainMessenger</h2>
+        <p>
+          ChainMessenger operates by connecting your Ethereum wallet via MetaMask for secure authentication. Once connected, the app leverages the XMTP protocol to enable end-to-end encrypted, wallet-to-wallet messaging. Messages are encrypted locally using the recipient's public key and sent to decentralized XMTP nodes, where they are stored securely and privately. Only the intended recipient, using their wallet's private key, can decrypt and read the messages. This architecture ensures that all communication remains private, censorship-resistant, and fully decentralized, with no central server ever accessing your data.
+        </p>
       </div>
 
 
