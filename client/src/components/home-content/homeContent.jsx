@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from "react";
 import "./LandingPage.css";
+import { Buffer } from 'buffer';
+import process from 'process';
+window.process = process;
+window.Buffer = Buffer;
 
 function LandingPage() {
   const [isAnimating, setIsAnimating] = useState(false);
